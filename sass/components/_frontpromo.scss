@@ -1,0 +1,36 @@
+.promotions {
+    padding-top: 80px;
+    position: relative;
+    .product {
+        width: 100%;
+        height: 400px;
+        margin-bottom: 20px;
+        background-position: center !important;
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+       &-image {
+           object-fit: cover;
+           object-position: center;
+            width: 100%;
+            height: 100%;
+       }
+    }
+
+    .promo-cutline {
+        position: absolute;
+        top:0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 3px;
+        height: 40px;
+        border-right: 3px dashed $platinum;
+    }
+
+    .promo-heading {
+        font-size: $h1-heading;
+        color:$golden;
+        
+        margin-bottom: 20px;
+        text-align: center;
+    }
+}

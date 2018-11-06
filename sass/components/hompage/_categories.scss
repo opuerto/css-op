@@ -1,0 +1,146 @@
+.categories {
+    position: relative;
+    .cate-row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .cate-column {
+            flex-basis: 50%;
+        }
+    }
+    .promo-cutline {
+        position: absolute;
+        top:0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 3px;
+        height: 40px;
+        border-right: 3px dashed $platinum;
+    }
+
+    .category-box {
+        background: linear-gradient(rgba(255,255,255,.8),rgba(255,255,255,.8)),url(/assets/diseno.jpg);
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+    }
+
+    .category-box--dark {
+        background: linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)),url(/assets/diseno.jpg);
+        background-position: center;
+        background-size: cover;
+        height: 100%;
+    }
+
+    .border-right {
+        border-right: 1px dashed $platinum;
+    }
+
+    .big-letter {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        font-family:'Lato'; 
+
+        .male-symbol {
+            display: none;
+            @include respond(sm) {
+                display: block;
+            }
+        }
+        
+        
+        .overlay-hover--dark {
+            display: block;
+            position: absolute;
+            z-index: 2;
+            top:0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)),url(/assets/diseno.jpg);
+            background-position: center;
+            background-size: cover;
+            
+            .tag {
+                position: absolute;
+                top:50%;
+                left:50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+                height: 200px;
+                text-align: center;
+                opacity: 0;   
+                color:$platinum;
+                h2 {
+                    margin: 0;
+                    padding: 0;
+                    font-size: 70px;
+                }
+                
+            }
+           
+        }        
+
+        h1 {
+            font-weight: 800;
+            font-size: 200px;
+            color: $golden;
+        }
+
+        .cate-button {
+            position: absolute;
+            z-index: 2;
+            transform: rotate(-90deg);
+            @include respond(sm) {
+                transform: rotate(0deg);
+                bottom: 90px;
+            }
+            @include respond(xl) {
+                display: none;
+            }
+            
+        }
+    }
+
+    .big-letter--dark {
+        h1 {
+            color:$platinum;
+        }
+    }
+
+    .big-picture {
+        width: 100%;
+        height: 100%;
+        background: url('/assets/mask-h.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+
+    .big-picture--girl {
+        background: url('/assets/mask-m.jpg');
+        background-position: top;
+        background-size: cover;
+    }
+
+    .big-letter:hover {
+               
+        .overlay-hover--dark {
+            @include respond(xl){
+                transition: width .2s;
+                width: 100%;
+               .tag {
+                   opacity: 1;
+               }  
+            }
+           
+        }   
+    }
+    
+}

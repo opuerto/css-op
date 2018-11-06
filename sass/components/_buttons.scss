@@ -1,0 +1,51 @@
+.btn {
+    display: inline-block;
+    width: 225px;
+    height: 75px;
+    text-align: center;
+    line-height: 75px;
+
+    &:active, &:link, &:hover, &:visited {
+        text-decoration: none;
+        font-size: 20px;
+    }
+
+   
+}
+
+.btn--center {
+    margin: 0 auto;
+}
+
+.btn--white {
+    background:white;
+}
+
+.btn--dark {
+    background: black;
+    color: $platinum;
+    &:hover {
+        color:black;
+    }
+}
+
+.btn--golden-empty {
+     border:1px solid $golden;
+     color:$golden;   
+
+     &:hover {
+         background: $golden;
+         color: $platinum;
+     }
+}
+
+.btn--golden-filled {
+    background: $golden;
+    color: $platinum;
+    &:hover {
+        transition: all .3s;
+        background: none;
+        border: 1px solid $golden;
+        color:$golden;
+    }
+}
