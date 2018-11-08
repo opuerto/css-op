@@ -22,7 +22,7 @@
             color: white;
             text-transform: uppercase;
         }
-        .btn:active, .btn:link, .btn:hover, .btn:visited {
+        .hero__btn:active, .hero__btn:link, .hero__btn:hover, .hero__btn:visited {
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
@@ -37,11 +37,11 @@
             transition: all .2s;
         }
 
-        .btn:link {
+        .hero__btn:link {
             background: $golden;
         }
 
-        .btn:hover {
+        .hero__btn:hover {
             background: transparent;
             border: 1px solid $golden;
             color:$golden;

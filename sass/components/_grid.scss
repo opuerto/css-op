@@ -3,6 +3,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  
 }
 
 .column {
@@ -10,12 +11,12 @@
   
   @include respond(md) {
     flex: 5;
-    flex: 0 0 calc(50% - 10px);
+    flex: 0 0 calc(50%);
     
   }
 
   @include respond(lg) {
-    flex: 0 0 calc(33.3333% - 10px);
+    flex: 0 0 calc(33.3333%);
    
   }
 }
