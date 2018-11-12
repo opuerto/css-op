@@ -1,11 +1,12 @@
 .promotion {
     position: relative;
     width: 100%;
-    height: 100vh;
-    background: url('/assets/flower-bg.jpg');
+    height: 85vh;
+    background: url('/assets/crew.jpg');
     background-origin: border-box;
     background-size: cover;
     background-position: center;
+    z-index: 1;
     .promo-container {
         width: 100%;
         margin: 0 auto;
@@ -30,7 +31,12 @@
 
     .promo-colum {
         display: flex;
-        flex: 0 0 100%;
+        flex: 0 0 85%;
+        margin: 0 auto;
+        @include respond(sm) {
+            flex: 0 0 88%;
+            margin: 0 auto;
+        }
         @include respond(xl) {
             flex: 0 0 50%;
         }
@@ -62,10 +68,11 @@
             margin: 0;
             padding: 0;
             font-family: 'Lato';
-            font-size: 55px;
+            font-size: 50px;
             font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 1px;
+            color:$base-color;
             @include respond(sm) {
                 font-size: 70px;
             }
@@ -74,11 +81,11 @@
             position: absolute;
             bottom: 34px;
             width: 100%;
-            height: 20px;
+            height: 12px;
             z-index: 1;
-            border-top: 20px solid $golden;
+            border-top: 2px solid $black;
             @include respond(sm) {
-                bottom: 22px;
+                bottom: 10px;
             }
         }
     }
@@ -133,4 +140,23 @@
     }
 
     
+}
+
+.stroke {
+    display: none;
+    @include respond(lg) {
+        display: block;
+    }
+    position: relative;
+   top: 0;
+   left: 0;
+   right: 0;
+   height: 200px;
+    z-index: 2;
+    
+    background-image: url('/assets/Stroke.png');
+    background-position: top;
+    background-size: cover;
+    margin-top: -85px;
+
 }

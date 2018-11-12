@@ -1,0 +1,131 @@
+.teaser {
+    position: relative;
+    margin-top: 40px;
+    @include respond(lg) {
+        margin-top: 0;
+    }
+    &-heading {
+        text-align: center;
+        h1 {
+            margin: 0;
+            padding: 0;
+            color: $nav-dark-6percent;
+            font-weight: 300;
+            font-size: 25px;
+            font-family: 'Lato';
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            
+            @include respond(md) {
+                font-size: 40px;
+            }
+            @include respond(lg){
+                font-size: 50px;
+            }
+        }
+    }   
+    .flag {
+        position: relative;
+        margin-bottom: 40px;
+        top:10px;
+        width: 200px;
+        left: 50%;
+        @include respond(md) {
+            width: 300px;
+        }
+        @include respond(lg){
+            width: 432px;
+        }
+        transform: translateX(-50%);
+        .blue-flag-colog, .white-flag-color {
+            background: #0074d0;
+            width: 100%;
+            height: 20px;
+        }
+        .white-flag-color {
+            background: white;
+        }
+    }
+    
+}
+
+.teaser__products {
+    margin-top: 80px;
+    .product-box {
+        position: relative;
+        display: flex;
+        width: 100%;
+        margin-bottom: 40px;
+        justify-content: center;
+        .product {
+            position: relative;
+            display: flex;
+            overflow: hidden;
+            height: 300px;
+            @include respond(sm) {
+                height: 400px;
+            }
+            @include respond(lx) {
+                width: 100%;
+            }
+            
+           
+            & img {
+                position: relative;
+                width: 300px;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                -o-object-fit: cover;
+               -o-object-position: center;
+            }
+            &-price {
+                position: absolute;
+                bottom: 0;
+                display: flex;
+                width: 100%;
+                height: 70px;
+                color: $platinum;
+                font-size: 18px;
+                background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7));
+                justify-content: center;
+                align-items: center;
+                @include respond(sm) {
+                    font-size: 25px;
+                }
+            }
+            .buy-box {
+                position:absolute;
+                bottom: -60px;
+                left: 50%;
+                transform: translate(-50%);
+                display: inline-block;
+                text-align: center;
+                color:$platinum;    
+                font-size: 22px;
+                width: 200px;
+                height: 50px;
+                background: $golden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                            
+            }
+            &:hover {
+                background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7));
+                & img {
+                    transition: all .3s;
+                    transform: scale(1.4);
+                }
+
+                & .buy-box {
+                    transition: all .3s;
+                    bottom: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+       
+    }
+}

@@ -6,7 +6,18 @@
         flex-wrap: wrap;
         height: 100vh;
         .cate-column {
-            flex-basis: 50%;
+            
+            flex-basis: 100%;
+            @include respond(sm) {
+                flex-basis: 50%;
+            }
+        }
+
+        .cate-column--male, .cate-column--female {
+            display: none;
+            @include respond(sm){
+                display: block;
+            }
         }
     }
     .promo-cutline {
@@ -24,8 +35,7 @@
         background-position: center;
         background-size: cover;
         height: 100%;
-        //height: 100vh;
-       // min-height: 100vh;
+      
     }
 
     .category-box--dark {
@@ -49,7 +59,10 @@
         align-items: center;
         text-transform: uppercase;
         font-family:'Lato'; 
-
+        @include respond(sm) {
+            justify-content: center;
+            flex-direction: column;
+        }
         .male-symbol, .female-symbol {
             display: none;
             @include respond(sm) {
@@ -135,12 +148,13 @@
         }
 
         .cate-button {
-            position: absolute;
             z-index: 2;
             transform: rotate(-90deg);
+            //writing-mode: vertical-rl;
+            //text-orientation: upright;
             @include respond(sm) {
                 transform: rotate(0deg);
-                bottom: 90px;
+               
             }
             @include respond(xl) {
                 display: none;
@@ -187,12 +201,3 @@
     
 }
 
-.stroke {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background: url('/assets/flower-bg.jpg');
-    background-origin: border-box;
-    background-size: cover;
-    background-position: center;
-}
